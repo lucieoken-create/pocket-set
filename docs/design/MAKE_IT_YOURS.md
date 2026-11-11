@@ -1,6 +1,6 @@
 # Make it yours
 
-The character should be **you**. Lucie's character is the personal example in this repository, not a default identity to copy into a shared fork. Build your own original character, or use an avatar you have permission to use.
+The character should be **you**. Lucie's character is the personal example in this repository. Build your own original character, or use an avatar you have permission to use.
 
 ![Pocket Set character reference and palette](reference-sheet.png)
 
@@ -8,7 +8,7 @@ The character should be **you**. Lucie's character is the personal example in th
 
 ## A small, friendly workflow
 
-1. Start with one standing character. Describe your appearance, hair, outfit and colors in the prompt. You do not need to upload a photo; if you do, use your own or one you have permission to use and check the image tool's privacy settings.
+1. Start with one standing character. Describe your appearance, hair, outfit and colors in the prompt, or upload a photo if you so choose.
 2. Once you like that character, reuse it as the reference for the other poses. Generate **one image at a time**, not a multi-character sheet. Keep the same face, proportions and pixel scale.
 3. Export each image as a PNG with the filename and canvas below. The generator may not produce exact dimensions: crop or pad to the required canvas in an image editor. Keep the whole body inside the frame; do not stretch a wide image into a narrow one.
 4. Replace files in `public/assets/characters/`. The app loads these directly, with no sprite-sheet coordinates to edit.
