@@ -1,3 +1,4 @@
+import {posePath,portraitPath} from './characters.js';
 import {classes,dirtyDraft,updateData} from './model.js';
 import {sync} from './sync.js';
 import {client} from './auth.js';
@@ -5,8 +6,8 @@ import {mountAccount} from './account.js';
 const THEME='pocket-set-theme-v1';
 const screen=document.querySelector('#screen');let data={},selected=null,draft={},saved=false,readError=false;
 
-const sprite=(pose=0,large=false)=>`<span class="sprite ${large?'large':''}" aria-hidden="true"><img src="assets/sprites.png" alt="" style="left:${[-34.38,-194.37,-354.38][pose%3]}%;top:${pose<3?-4.17:-110.83}%"></span>`;
-const portrait=(happy=false)=>`<span class="portrait ${happy?'happy':''}" aria-hidden="true"><img src="assets/portraits.png" alt=""></span>`;
+const sprite=(pose=0,large=false)=>`<span class="sprite ${large?'large':''}" aria-hidden="true"><img src="${posePath(pose)}" alt=""></span>`;
+const portrait=(happy=false)=>`<span class="portrait ${happy?'happy':''}" aria-hidden="true"><img src="${portraitPath(happy)}" alt=""></span>`;
 const summary=c=>c.areas.map(a=>`${a==='Lower Body'?'Lower':a} ${data[a]?.weight??'—'}`).join(' · ');
 function mode(name){document.documentElement.dataset.theme=name;document.querySelectorAll('.modes button').forEach(b=>b.setAttribute('aria-pressed',String(b.id===name)));try{localStorage.setItem(THEME,name)}catch{}}
 let theme='day';try{theme=localStorage.getItem(THEME)==='night'?'night':'day'}catch{}mode(theme);

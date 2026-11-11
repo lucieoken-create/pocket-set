@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "build": "node scripts/build.mjs",
-    "test": "node scripts/test-client.mjs && node scripts/test-icons.mjs"
+    "test": "node scripts/test-client.mjs && node scripts/test-icons.mjs && node scripts/test-characters.mjs"
   },
   "dependencies": {
     "@supabase/supabase-js": "2.119.0"

@@ -1,8 +1,16 @@
 # Pocket Set
 
-A little handheld-style weights tracker: choose a class, save the weight per dumbbell, and see the same body-area values in every class that uses them. Day/night mode and the original pixel artwork are preserved.
+A playful dumbbell-weight tracker built around **Barry’s class splits**: choose a class, save the weight per dumbbell, and see the same body-area values in every class that uses them. Independent project, not affiliated with or endorsed by Barry’s. The class/weekday presets are editable in code, not a live studio timetable.
 
 This version uses **Supabase Auth + Postgres row-level security (RLS)**. Sign in to the same Pocket Set account on each device. It stores the latest weight for each of five body areas, not workout history.
+
+## Make it yours
+
+The character is supposed to be you. Create your own original avatar with the [character design kit](docs/design/MAKE_IT_YOURS.md): a [visual reference sheet](docs/design/reference-sheet.png), [copyable prompt](docs/design/CHARACTER_PROMPT.md), and eight easy-to-replace PNG files. You can begin with one pose used in all six slots. No sprite-sheet crop coordinates needed.
+
+![Pocket Set character design reference](docs/design/reference-sheet.png)
+
+Lucie’s personal character is the example, not a generic avatar for shared forks. See [ARTWORK.md](ARTWORK.md) for the distinction between the MIT application code and the personal character art.
 
 ## Using an app built from this repo
 
@@ -83,4 +91,4 @@ See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) for fonts, icon source, and
 
 ## License
 
-Application code is available under the [MIT License](LICENSE). Third-party fonts and dependencies retain their own licenses; see [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
+Application code is available under the [MIT License](LICENSE). Personal character art is separate; see [ARTWORK.md](ARTWORK.md). Third-party fonts and dependencies retain their own licenses; see [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).

@@ -4,7 +4,7 @@ import {build} from 'esbuild';
 const root=path.resolve(import.meta.dirname,'..');
 await rm(path.join(root,'dist'),{recursive:true,force:true});
 await mkdir(path.join(root,'dist'),{recursive:true});
-for(const file of ['index.html','style.css','assets','favicon.ico','favicon-32.png','apple-touch-icon.png'])await cp(path.join(root,'public',file),path.join(root,'dist',file),{recursive:true});
+for(const file of ['index.html','character-preview.html','style.css','assets','favicon.ico','favicon-32.png','apple-touch-icon.png'])await cp(path.join(root,'public',file),path.join(root,'dist',file),{recursive:true});
 await build({entryPoints:[path.join(root,'public/app.js')],outfile:path.join(root,'dist/app.js'),bundle:true,minify:true,format:'esm',target:['es2022'],legalComments:'eof'});
 await writeFile(path.join(root,'dist/_headers'),"/*\n  X-Content-Type-Options: nosniff\n  Referrer-Policy: no-referrer\n  Cache-Control: no-cache\n");
 console.log('Built static Pocket Set with bundled Supabase client.');
