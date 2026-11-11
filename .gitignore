@@ -1,0 +1,9 @@
+.env
+.env.*
+!.env.example
+node_modules/
+dist/
+.openai/
+public/config.js
+*.tgz
+.DS_Store
